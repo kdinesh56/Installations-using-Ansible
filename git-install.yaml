@@ -1,0 +1,10 @@
+---
+- hosts: GIT
+  tasks:
+    - name: Update the repository
+      apt-repository:
+        repo: 'ppa:git-core/ppa'
+        state: present
+    - name: Install GIT
+      state: present
+      update-cache: yes 
