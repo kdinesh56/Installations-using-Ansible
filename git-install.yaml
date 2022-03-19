@@ -1,10 +1,14 @@
 ---
-- hosts: GIT
-  tasks:
-    - name: Update the repository
-      apt-repository:
-        repo: 'ppa:git-core/ppa'
-        state: present
-    - name: Install GIT
-      state: present
-      update-cache: yes 
+  - hosts: gitservers
+    tasks:
+      - name: Update APT package manager repositories cache
+        become: true
+        apt:
+          update_cache: yes
+  
+      - name: Install Git Package
+        become: true
+        apt:
+          name: git
+          state: latest
+          update_cache: yes
