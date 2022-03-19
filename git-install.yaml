@@ -1,5 +1,5 @@
 ---
-  - hosts: gitservers
+  - hosts: GIT
     tasks:
       - name: Update APT package manager repositories cache
         become: true
