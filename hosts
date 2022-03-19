@@ -1,0 +1,8 @@
+[GIT]
+your-Container1-ip  ansible_connection=ssh ansible_user=demo ansible_ssh_pass=demo
+
+[JENKINS]
+your-Container2-ip   ansible_connection=ssh ansible_user=demo ansible_ssh_pass=demo
+
+[TOMCAT]
+your-Container3-ip   ansible_connection=ssh ansible_user=demo ansible_ssh_pass=demo
